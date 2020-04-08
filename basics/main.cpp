@@ -4,6 +4,14 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+int VectorAddition(vector<int> v)  {
+    int sum = 0;
+    for ( int i : v) {
+        sum += i;
+    }
+    return sum;
+}
+
 int main (){
     cout << "Hello!" << "\n";
 
@@ -34,6 +42,34 @@ int main (){
     //auto
     auto i=9;
     auto va = {1,2,3};
+
+    cout << "for with increment" << endl;
+    for( int i=0; i<3; i++) {
+        cout << i <<endl;
+    }
+
+    cout << "for with vector" << endl;
+    vector<int> for_vector = {7,6,5};
+    for ( int i : for_vector) {
+        cout << i << endl;
+    }
+
+    cout << "for with 2d vector" << endl;
+    vector<vector<int>> b {{1, 2},
+                           {3, 4},
+                           {5, 6}};
+
+    for ( vector<int>  vv : b) { 
+        for ( int i : vv) {
+            cout << i << endl;
+        }
+    }
+
+    cout << "vector additions" << endl;
+    int sum = VectorAddition(for_vector);
+    cout << "sum:" << sum << endl;
+
+
 
     return 0;
 }
